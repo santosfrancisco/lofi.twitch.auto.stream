@@ -23,6 +23,10 @@ module.exports.Start = async () => {
   let ingest;
   if (!process.env.INGEST) ingest = await GetIngest();
   else ingest = process.env.INGEST;
+  console.log(
+    "🚀 ~ file: stream.js:26 ~ module.exports.Start= ~ ingest:",
+    ingest
+  );
 
   command = ffmpeg()
     .addInput("./assets/bkg.gif")
